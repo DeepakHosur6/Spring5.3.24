@@ -13,13 +13,14 @@ import com.xworkz.SpringDay6.configuration6.Configuration6;
 public class Tester6 {
 	public static void main(String[] args) {
 
-		
-		
-		ApplicationContext container=new AnnotationConfigApplicationContext(Configuration6.class);
+		ApplicationContext container = new AnnotationConfigApplicationContext(Configuration6.class);
 
 		System.out.println(Arrays.toString(container.getBeanDefinitionNames()));
+
+		System.out.println("Total bean is: " + container.getBeanDefinitionCount());
+
 		System.out.println("=========News Paper==========");
-		NewsPaper ref=container.getBean(NewsPaper.class);
+		NewsPaper ref = container.getBean(NewsPaper.class);
 
 		System.out.println(ref);
 
@@ -28,17 +29,15 @@ public class Tester6 {
 		Snake ref1 = container.getBean(Snake.class);
 		System.out.println(ref1);
 		System.out.println("==========================================");
-		
+
 		System.out.println("=========Engine==========");
 
-		Engine ref2=container.getBean(Engine.class);
+		Engine ref2 = container.getBean(Engine.class);
 
 		System.out.println(ref2);
-		
+
 		System.out.println("==========================================");
-		
-		
-		
+
 		System.out.println("==========================================");
 	}
 

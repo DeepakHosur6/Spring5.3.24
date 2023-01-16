@@ -1,10 +1,12 @@
 package com.xworkz.SpringDay6.configuration6;
 
-import java.awt.Window.Type;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
+import com.xworkz.SpringDay6.app.Type;
 
 @Configuration
 @ComponentScan("com.xworkz")
@@ -50,9 +52,13 @@ public class Configuration6 {
 		return "india";
 	}
 
-	/*
-	 * @Bean public Type etype() { return Type.big; }
-	 */
+	
+	  @Bean
+	  public Type etype()
+	  {
+		  return Type.big;
+	  }
+	 
 
 	@Bean
 	public String ecompany()
