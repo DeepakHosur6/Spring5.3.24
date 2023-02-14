@@ -1,0 +1,103 @@
+	Day 8   Starting data base configuration using mysql 
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	Steps for Db 
+	
+	1)  Add dependencies(hibernate-core, spring-orm,mysql-3-connector) 
+	
+	2) Keep the persistence.xml inside resources/META-INF
+		Add the resources folder into buildpath 
+		
+	3) Creating Schema and Table
+	
+	4.Edit persistence.xml and add 4 properties 5. Provide Entity Mapping of below, from javax.persistence
+	
+	@Entity
+	@Table(name=**) // table name given in mysql ex: brakery_table
+	// should be above class 
+	@Column(name=**)
+	
+	@Id
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	<properties>
+			<spring.lib.version>5.3.9</spring.lib.version>
+			<lombok.lib.version>1.18.24</lombok.lib.version>
+			<quarkusi.esoquarkus>1.13.7.Final</quarkusi.esoquarkus>
+			<jstl.version>1.2</jstl.version>
+			<hibernate.version>5.6.15.Final</hibernate.version>
+			<mysql.version>8.0.32</mysql.version>
+	
+		</properties>
+	
+	
+	New dependency
+	Spring-orm   this is same as spring framework 
+	
+			
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-orm</artifactId>
+			    <version>5.3.9</version>
+			</dependency>
+			
+	
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+	
+			<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+			<dependency>
+				<groupId>com.mysql</groupId>
+				<artifactId>mysql-connector-j</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	open presistence.xml then see down and click at source then start writing the property
+	 root , password, vendor and rest all
+	
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/bakery" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="Xworkzodc@123" />
+	
+	
+	persistence web LINK
+	----------------------------------------------------------------------------------------------------------------------------------------
+	https://www.infoworld.com/article/3373652/java-persistence-with-jpa-and-hibernate-part-1-entities-and-relationships.html?page=2
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	Start writing sql in mysql workbench 
+	
+	1) Create a datbase ex: bakery
+	2) Then add table name and insert values in to table 
+	3) then map the values in dto class using . write annotation in dto class file
+				@Entity
+				@Table(name=**) // table name given in mysql ex: brakery_table
+				// should be above class 
+				@Column(name=**)    
+				
+				@Id
+	
+	
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	----------------------------------------------------------------------------------------------------------------------------------------
+	
