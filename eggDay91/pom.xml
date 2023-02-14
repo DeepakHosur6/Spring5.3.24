@@ -6,62 +6,32 @@
 	<packaging>war</packaging>
 
 	<properties>
- 
-  <spring.web.mvc.version>5.3.21</spring.web.mvc.version>
-  <lombok.lib.version>1.18.24</lombok.lib.version>
-  <quarkus.lib.version>1.13.7.Final</quarkus.lib.version>
-  <hibernate.lib.version>5.6.15.Final</hibernate.lib.version>
-  <mysql.lob.version>8.0.32</mysql.lob.version>
-  </properties>
-  
-  <dependencies>
-  
-  <!-- Additional dependency file its for system which giving error-->
+
+		<spring.web.mvc.version>5.3.21</spring.web.mvc.version>
+		<lombok.lib.version>1.18.24</lombok.lib.version>
+		<quarkus.lib.version>1.13.7.Final</quarkus.lib.version>
+		<hibernate.lib.version>5.6.15.Final</hibernate.lib.version>
+		<mysql.lob.version>8.0.32</mysql.lob.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- Additional dependency file its for system which giving error-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-	
-		
+		<!-- Additional dependency file its for system which giving error-->
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.web.mvc.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.web.mvc.version}</version>
-		</dependency>
-		
-		
-	
-		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>${hibernate.lib.version}</version>
-</dependency>
 
-<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-<dependency>
-    <groupId>com.mysql</groupId>
-    <artifactId>mysql-connector-j</artifactId>
-    <version>${mysql.lob.version}</version>
-</dependency>
-
-
-		
-		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-hibernate-validator</artifactId>
-			<version>${quarkus.lib.version}</version>
-		</dependency>
-		
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -69,9 +39,41 @@
 			<version>${lombok.lib.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
-	</dependencies>
 
+		<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-junit5 -->
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-hibernate-validator</artifactId>
+			<version>${quarkus.lib.version}</version>
+		</dependency>
+
+
+		<!-- New dependency for DB-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.web.mvc.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.lib.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>${mysql.lob.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl 1.2-->
+		
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl 1.2-->
+	</dependencies>
 
 	<build>
 		<plugins>
